@@ -1,0 +1,345 @@
+.header {
+    background-color: #003472;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Set a higher z-index value to make sure the header is above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between; /* Distribute items to the start and end of the flex container */
+    align-items: center;
+}
+
+
+.img-background {
+    height: 80vh;
+    background-image: url('../images/good.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    /* Set the position to relative */
+    display: flex;
+    margin-top: 5%;
+}
+
+.img-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the color and opacity as needed */
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    mix-blend-mode: lighten;
+    overflow: auto;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Prevents padding and border from making elements wider */
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+.main-envelop {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-envelop {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+}
+
+.card {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the card width for different screen sizes */
+    margin: 10px; /* Add spacing between cards */
+}
+
+.card-body {
+    text-align: center; /* Center align card text */
+}
+
+.writing-envelop {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    min-height: 75vh;
+    /* Changed to 'min-height' for responsiveness */
+    
+}
+
+.main-writingblock1 {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    text-align: left;
+    width: 70%;
+    margin: 2% 0;
+    /* Combine margin-top and margin-bottom */
+    
+}
+
+.main-writingblock2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1%;
+    width: 70%;
+    
+}
+
+.sub-writingblock {
+    overflow: auto;
+    
+}
+
+.cardwriting-envelop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EBEFF4;
+    
+}
+
+.card-headings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 70%;
+    min-height: 25vh;
+    /* Changed to 'min-height' for responsiveness */
+    
+}
+
+.card-collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4%;
+    width: 70%;
+    
+    margin-bottom: 3%;
+}
+
+.writing-card {
+    padding: 2%;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 120%;
+    overflow-y: auto;
+    
+}
+
+
+.main-about {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.sub-about {
+    
+    width: 40%;
+    height: 40vh;
+    max-height: 120%;
+    overflow-y: auto;
+    gap: 2%;
+}
+
+/* Style for the text over the image */
+.img-background2 {
+    height: 40vh;
+    background-image: url('../images/meeting.avif');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+}
+
+.img-background2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the color and opacity as needed */
+}
+
+/* Style for the text over the image */
+.text-over-image {
+    color: white;
+    mix-blend-mode: lighten;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    
+    overflow: auto;
+}
+
+
+
+.footer-envelop {
+    background-color: #003472;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0; /* Add padding for spacing */
+}
+
+.footer-logo {
+    width: 60%;
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+}
+
+.footer-policies {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap; /* Allow policies to wrap to the next line on smaller screens */
+    justify-content: center; /* Center the policies horizontally */
+}
+
+.sub-policies {
+    width: 100%; /* Take up the full width on smaller screens */
+    text-align: center;
+    margin: 10px 0; /* Add spacing between policies */
+}
+
+.footer-bottom {
+    color: #9DABBD;
+}
+
+
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5%;
+  }
+
+
+
+/* Media query for smaller screens (e.g., mobile phones) */
+@media screen and (max-width: 768px) {
+    .container-fluid {
+        height: 15vh;
+        /* Adjust height for smaller screens */
+    }
+
+    .writing-card {
+        max-height: none;
+        font-size: 90%;
+    }
+
+    .card-collection {
+        width: 100%;
+    }
+
+    .main-writingblock1,
+    .main-writingblock2,
+    .card-headings {
+        width: 90%;
+        /* Adjust the width for smaller screens */
+    }
+
+    .card-collection {
+        grid-template-columns: 1fr;
+        /* Change to a single column layout on smaller screens */
+        gap: 2%;
+        /* Reduce the gap between cards */
+    }
+
+    .img-background2 {
+        height: 60vh;
+        /* Adjust the height for smaller screens */
+    }
+
+    .text-over-image {
+        width: 90%;
+        /* Adjust the width for smaller screens */
+        font-size: 90%;
+        /* Adjust the font size for smaller screens */
+    }
+
+    .footer-logo, .footer-policies {
+        width: 90%; /* Adjust the width for smaller screens */
+    }
+    .sub-policies {
+        width: 100%; /* Take up the full width on smaller screens */
+    }
+
+    .card {
+        flex: 0 0 calc(100% - 20px); /* Make cards take full width on smaller screens */
+    }
+
+    .container {
+        height: 70%;
+    }
+
+}
